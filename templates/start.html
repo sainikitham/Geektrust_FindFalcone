@@ -12,14 +12,14 @@
     <fieldset id="myFieldset" class="fieldset">
       <label> Destination 1: </label>
       <br>
-      <select id="dest1" ng-change="update('dest1','vehicles1');" ng-model="item">
+      <select id="dest1" ng-change="update('dest1','vehicles1',item);" ng-model="item">
         <option value="">select</option>
-        <option ng-repeat="planet in planets" value="{{planet.distance}}">{{planet.name}}</option>
+        <option ng-repeat="planet in planets" value="{{planet.name}}">{{planet.name}}</option>
       </select>
       <br><br>
       <ul ng-show="vehicles1" id="vehicles1">
           <li ng-repeat="vehicle in vehicles">
-              <input type="radio" id="{{vehicle.name}}" ng-click="start(this,'myFieldset')" name="dest1_name" value="{{vehicle.speed}}" /> {{vehicle.name}} ({{vehicle.total_no}})
+              <input type="radio" id="{{vehicle.name}}" ng-click="start(this,'myFieldset','vehicles1')" name="dest1_name" value="{{vehicle.speed}}" /> {{vehicle.name}} ({{vehicle.total_no}})
           </li>
       </ul>
     </fieldset>
@@ -30,14 +30,14 @@
     <fieldset id="myFieldset1" class="fieldset">
       <label> Destination 2: </label>
       <br>
-      <select id="dest2" ng-change="update('dest2','vehicles2');" ng-model="item1">
+      <select id="dest2" ng-change="update('dest2','vehicles2',item1);" ng-model="item1">
         <option value="">select</option>
-        <option ng-repeat="planet in planets" value="{{planet.distance}}">{{planet.name}}</option>
+        <option ng-repeat="planet in planets" value="{{planet.name}}">{{planet.name}}</option>
       </select>
       <br><br>
       <ul ng-show="vehicles2" id="vehicles2">
           <li ng-repeat="vehicle in vehicles">
-            <input type="radio" id="{{vehicle.name}}" ng-click="start(this,'myFieldset1')" name="dest2_name" value="{{vehicle.speed}}" /> {{vehicle.name}} ({{vehicle.total_no}})
+            <input type="radio" id="{{vehicle.name}}" ng-click="start(this,'myFieldset1','vehicles2')" name="dest2_name" value="{{vehicle.speed}}" /> {{vehicle.name}} ({{vehicle.total_no}})
           </li>
       </ul>
     </fieldset>
@@ -47,14 +47,14 @@
     <fieldset id="myFieldset2" class="fieldset">
       <label> Destination 3: </label>
       <br>
-      <select id="dest3" ng-change="update('dest3','vehicles3');" ng-model="item2">
+      <select id="dest3" ng-change="update('dest3','vehicles3',item2);" ng-model="item2">
         <option value="">select</option>
-        <option ng-repeat="planet in planets" value="{{planet.distance}}">{{planet.name}}</option>
+        <option ng-repeat="planet in planets" value="{{planet.name}}">{{planet.name}}</option>
       </select>
       <br><br>
       <ul ng-show="vehicles3" id="vehicles3">
           <li ng-repeat="vehicle in vehicles">
-            <input type="radio" id="{{vehicle.name}}" ng-click="start(this,'myFieldset2')" name="dest3_name" value="{{vehicle.speed}}" /> {{vehicle.name}} ({{vehicle.total_no}})
+            <input type="radio" id="{{vehicle.name}}" ng-click="start(this,'myFieldset2','vehicles3')" name="dest3_name" value="{{vehicle.speed}}" /> {{vehicle.name}} ({{vehicle.total_no}})
           </li>
       </ul>
     </fieldset>
@@ -64,14 +64,14 @@
     <fieldset id="myFieldset3" class="fieldset">
       <label> Destination 4: </label>
       <br>
-      <select id="dest4" ng-change="update('dest4','vehicles4');" ng-model="item3">
+      <select id="dest4" ng-change="update('dest4','vehicles4',item3);" ng-model="item3">
         <option value="">select</option>
-        <option ng-repeat="planet in planets" value="{{planet.distance}}">{{planet.name}}</option>
+        <option ng-repeat="planet in planets" value="{{planet.name}}">{{planet.name}}</option>
       </select>
       <br><br>
       <ul ng-show="vehicles4" id="vehicles4">
           <li ng-repeat="vehicle in vehicles">
-            <input type="radio" id="{{vehicle.name}}" ng-click="start(this,'myFieldset3')" name="dest4_name" value="{{vehicle.speed}}" /> {{vehicle.name}} ({{vehicle.total_no}})
+            <input type="radio" id="{{vehicle.name}}" ng-click="start(this,'myFieldset3','vehicles4')" name="dest4_name" value="{{vehicle.speed}}" /> {{vehicle.name}} ({{vehicle.total_no}})
           </li>
       </ul>
     </fieldset>

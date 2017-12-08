@@ -44,22 +44,6 @@ app.controller('myCtrl', function($scope, $http) {
             $scope.vehicles[i].disable = 'disabled';
           }
         }
-        if (bool == 'vehicles1') {
-          $scope.vehicles1  = true;
-          $scope.vehicles1 = $scope.vehicles;
-        }
-        if (bool == 'vehicles2') {
-          $scope.vehicles2  = true;
-          $scope.vehicles2 = $scope.vehicles;
-        }
-        if (bool == 'vehicles3') {
-          $scope.vehicles3  = true;
-          $scope.vehicles3 = $scope.vehicles;
-        }
-        if (bool == 'vehicles4') {
-          $scope.vehicles4  = true;
-          $scope.vehicles4 = $scope.vehicles;
-        }
       }else if (item == "Enchai") {
         var distance = 200;
         for (var i = 0; i < $scope.vehicles.length; i++) {
@@ -107,6 +91,7 @@ app.controller('myCtrl', function($scope, $http) {
             $scope.vehicles[i].disable = 'disabled';
           }
         }
+        console.log($scope.vehicles);
       }
      $scope.distance = distance;
  };

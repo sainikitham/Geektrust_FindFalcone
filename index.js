@@ -19,6 +19,8 @@ app.controller('myCtrl', function($scope, $http) {
     .then(function(response) {
         $scope.vehicles = response.data;
     });
+  //  $scope.vehicles.push($scope.planets);
+
    $scope.update = function(id,bool,item){
 
      if (bool == 'vehicles1') {
@@ -35,20 +37,77 @@ app.controller('myCtrl', function($scope, $http) {
      }
       if (item == 'Donlon') {
         var distance = 100;
+        for (var i = 0; i < $scope.vehicles.length; i++) {
+          if ($scope.vehicles[i].max_distance >= distance) {
+              $scope.vehicles[i].disable = 'nodisabled';
+          }else {
+            $scope.vehicles[i].disable = 'disabled';
+          }
+        }
+        if (bool == 'vehicles1') {
+          $scope.vehicles1  = true;
+          $scope.vehicles1 = $scope.vehicles;
+        }
+        if (bool == 'vehicles2') {
+          $scope.vehicles2  = true;
+          $scope.vehicles2 = $scope.vehicles;
+        }
+        if (bool == 'vehicles3') {
+          $scope.vehicles3  = true;
+          $scope.vehicles3 = $scope.vehicles;
+        }
+        if (bool == 'vehicles4') {
+          $scope.vehicles4  = true;
+          $scope.vehicles4 = $scope.vehicles;
+        }
       }else if (item == "Enchai") {
         var distance = 200;
+        for (var i = 0; i < $scope.vehicles.length; i++) {
+          if ($scope.vehicles[i].max_distance >= distance) {
+              $scope.vehicles[i].disable = 'nodisabled';
+          }else {
+            $scope.vehicles[i].disable = 'disabled';
+          }
+        }
       }
       else if (item == "Jebing") {
         var distance = 300;
+        for (var i = 0; i < $scope.vehicles.length; i++) {
+          if ($scope.vehicles[i].max_distance >= distance) {
+              $scope.vehicles[i].disable = 'nodisabled';
+          }else {
+            $scope.vehicles[i].disable = 'disabled';
+          }
+        }
       }else if (item == "Sapir") {
         var distance = 400;
+        for (var i = 0; i < $scope.vehicles.length; i++) {
+          if ($scope.vehicles[i].max_distance >= distance) {
+              $scope.vehicles[i].disable = 'nodisabled';
+          }else {
+            $scope.vehicles[i].disable = 'disabled';
+          }
+        }
       }
       else if (item == "Lerbin") {
         var distance = 500;
+        for (var i = 0; i < $scope.vehicles.length; i++) {
+          if ($scope.vehicles[i].max_distance >= distance) {
+              $scope.vehicles[i].disable = 'nodisabled';
+          }else {
+            $scope.vehicles[i].disable = 'disabled';
+          }
+        }
       }else if (item == "Pingasor") {
         var distance = 600;
+        for (var i = 0; i < $scope.vehicles.length; i++) {
+          if ($scope.vehicles[i].max_distance >= distance) {
+              $scope.vehicles[i].disable = 'nodisabled';
+          }else {
+            $scope.vehicles[i].disable = 'disabled';
+          }
+        }
       }
-     //var distance = document.getElementById(id).value;
      $scope.distance = distance;
  };
 
@@ -103,7 +162,6 @@ app.controller('myCtrl', function($scope, $http) {
        var plane3 = $scope.item3;
        var cars = new Array;
        cars.push(plane);cars.push(plane1);cars.push(plane2);cars.push(plane3);
-       console.log(cars);
        //vehicles
        var blah = $scope.vehicles1;
        var blah1 = $scope.vehicles2;
@@ -111,7 +169,6 @@ app.controller('myCtrl', function($scope, $http) {
        var blah3 = $scope.vehicles4;
        var bikes = new Array;
        bikes.push(blah);bikes.push(blah1);bikes.push(blah2);bikes.push(blah3);
-       console.log(bikes);
        var req = {
        method: 'POST',
        url: 'http://findfalcone.herokuapp.com/find',
@@ -144,4 +201,9 @@ app.controller('myCtrl', function($scope, $http) {
        });
      }
    }
+});
+app.filter('display', function ($scope) {
+    return function (item) {
+      console.log($scope.vehicles1 + $scope.item);
+    };
 });

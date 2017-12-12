@@ -10,14 +10,14 @@ app.config(function($routeProvider) {
         controller : "myCtrl"
     });
 });
-app.controller('myCtrl', function($scope, $http) {
+app.controller('myCtrl', function($scope, $http,  $route) {
     $http.get("https://findfalcone.herokuapp.com/planets")
     .then(function(response) {
         $scope.planets = response.data;
     });
-    $scope.getRandomSpan = function(){
-      return Math.floor((Math.random()*6)+1);
-    }
+    $scope.reloadRoute = function () {
+        $route.reload();
+    };
    $scope.update = function(id,bool,item){
      if (bool == 'vehicles1') {
        $scope.vehicles1  = true;
@@ -58,13 +58,11 @@ app.controller('myCtrl', function($scope, $http) {
           for (var i = 0; i < $scope[bool].length; i++) {
             if ($scope[bool][i].max_distance >= distance) {
                 $scope[bool][i].disable = 'nodisabled';
-
             }else {
               $scope[bool][i].disable = 'disabled';
             }
           }
         }
-
       }
       else if (item == "Jebing") {
         var distance = 300;
@@ -134,11 +132,11 @@ app.controller('myCtrl', function($scope, $http) {
       }
      $scope.distance = distance;
  };
-    var bikes = [];
+   var vehicles = [];
    $scope.start = function(id,disable,flash) {
     document.getElementById(disable).disabled = true;
-    bikes.push(id.vehicle.name);
-    $scope.bikes = bikes;
+    vehicles.push(id.vehicle.name);
+    $scope.post_vehicles = vehicles;
     var x = id.vehicle.speed;
     var y = $scope.distance;
     var a = eval("y / x") ;
@@ -156,7 +154,6 @@ app.controller('myCtrl', function($scope, $http) {
       document.getElementById('btn').disabled = false;
     }
    }
-
    $scope.getDetails = function() {
      var time = localStorage.getItem('time');
      var req = {
@@ -172,14 +169,9 @@ app.controller('myCtrl', function($scope, $http) {
          find($scope.token)
      });
      function find(val){
-       //planets
        var val = val.substr(1).slice(0, -1);
-       var plane = $scope.item;
-       var plane1 = $scope.item1;
-       var plane2 = $scope.item2;
-       var plane3 = $scope.item3;
-       var cars = new Array;
-       cars.push(plane);cars.push(plane1);cars.push(plane2);cars.push(plane3);
+       var post_planets = [$scope.item, $scope.item1, $scope.item2, $scope.item3];
+       $scope.post_planets = post_planets;
        var req = {
        method: 'POST',
        url: 'http://findfalcone.herokuapp.com/find',
@@ -189,8 +181,8 @@ app.controller('myCtrl', function($scope, $http) {
        },
        data: {
            "token": val,
-           "planet_names" : cars,
-           "vehicle_names" : $scope.bikes
+           "planet_names" : $scope.post_planets,
+           "vehicle_names" : $scope.post_vehicles
        }
        }
        console.log(req);

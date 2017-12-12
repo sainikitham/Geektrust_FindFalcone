@@ -15,9 +15,18 @@ app.controller('myCtrl', function($scope, $http) {
     .then(function(response) {
         $scope.planets = response.data;
     });
+<<<<<<< HEAD
     $scope.getRandomSpan = function(){
       return Math.floor((Math.random()*6)+1);
     }
+=======
+    // $http.get("https://findfalcone.herokuapp.com/vehicles")
+    // .then(function(response) {
+    //     $scope.vehicles = response.data;
+    // });
+  //  $scope.vehicles.push($scope.planets);
+
+>>>>>>> d70b022c6d5953d27cfcfdc3f527c2815065cca7
    $scope.update = function(id,bool,item){
      if (bool == 'vehicles1') {
        $scope.vehicles1  = true;
@@ -36,6 +45,10 @@ app.controller('myCtrl', function($scope, $http) {
         $http.get("https://findfalcone.herokuapp.com/vehicles")
         .then(function(response) {
             $scope[bool] = response.data;
+<<<<<<< HEAD
+=======
+            console.log(bool);
+>>>>>>> d70b022c6d5953d27cfcfdc3f527c2815065cca7
             j();
         });
         function j(){
@@ -52,13 +65,20 @@ app.controller('myCtrl', function($scope, $http) {
         $http.get("https://findfalcone.herokuapp.com/vehicles")
         .then(function(response) {
             $scope[bool] = response.data;
+<<<<<<< HEAD
+=======
+            console.log(bool);
+>>>>>>> d70b022c6d5953d27cfcfdc3f527c2815065cca7
             j();
         });
         function j(){
           for (var i = 0; i < $scope[bool].length; i++) {
             if ($scope[bool][i].max_distance >= distance) {
                 $scope[bool][i].disable = 'nodisabled';
+<<<<<<< HEAD
 
+=======
+>>>>>>> d70b022c6d5953d27cfcfdc3f527c2815065cca7
             }else {
               $scope[bool][i].disable = 'disabled';
             }
@@ -71,6 +91,10 @@ app.controller('myCtrl', function($scope, $http) {
         $http.get("https://findfalcone.herokuapp.com/vehicles")
         .then(function(response) {
             $scope[bool] = response.data;
+<<<<<<< HEAD
+=======
+            console.log(bool);
+>>>>>>> d70b022c6d5953d27cfcfdc3f527c2815065cca7
             j();
         });
         function j(){
@@ -87,6 +111,10 @@ app.controller('myCtrl', function($scope, $http) {
         $http.get("https://findfalcone.herokuapp.com/vehicles")
         .then(function(response) {
             $scope[bool] = response.data;
+<<<<<<< HEAD
+=======
+            console.log(bool);
+>>>>>>> d70b022c6d5953d27cfcfdc3f527c2815065cca7
             j();
         });
         function j(){
@@ -104,6 +132,10 @@ app.controller('myCtrl', function($scope, $http) {
         $http.get("https://findfalcone.herokuapp.com/vehicles")
         .then(function(response) {
             $scope[bool] = response.data;
+<<<<<<< HEAD
+=======
+            console.log(bool);
+>>>>>>> d70b022c6d5953d27cfcfdc3f527c2815065cca7
             j();
         });
         function j(){
@@ -120,6 +152,10 @@ app.controller('myCtrl', function($scope, $http) {
         $http.get("https://findfalcone.herokuapp.com/vehicles")
         .then(function(response) {
             $scope[bool] = response.data;
+<<<<<<< HEAD
+=======
+            console.log(bool);
+>>>>>>> d70b022c6d5953d27cfcfdc3f527c2815065cca7
             j();
         });
         function j(){

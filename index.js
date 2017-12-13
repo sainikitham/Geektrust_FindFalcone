@@ -309,7 +309,7 @@ app.controller('myCtrl', function($scope, $http,  $route) {
      var time = localStorage.getItem('time');
      var req = {
      method: 'POST',
-     url: 'http://findfalcone.herokuapp.com/token',
+     url: 'https://findfalcone.herokuapp.com/token',
      headers: {
        'Accept' : 'application/json'
      },
@@ -325,7 +325,7 @@ app.controller('myCtrl', function($scope, $http,  $route) {
        $scope.post_planets = post_planets;
        var req = {
        method: 'POST',
-       url: 'http://findfalcone.herokuapp.com/find',
+       url: 'https://findfalcone.herokuapp.com/find',
        headers: {
          'Accept' : 'application/json',
          'Content-Type' :'application/json'

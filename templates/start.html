@@ -18,7 +18,7 @@
       </select>
       <br><br>
       <ul ng-show="vehicles1" id="vehicles1">
-          <li ng-repeat="vehicle in vehicles1" class="{{vehicle.disable}}">
+          <li ng-repeat="vehicle in vehicles1 track by (vehicle.name + vehicle.total_no)" class="{{vehicle.disable}}">
               <input type="radio" id="{{vehicle.name}}" ng-click="start(this,'myFieldset','vehicles1')" name="dest1_name" value="{{vehicle.speed}}" /> {{vehicle.name}} ({{vehicle.total_no}})
           </li>
       </ul>
@@ -86,3 +86,4 @@
     </div>
   </fieldset>
 </div>
+<br><br><br>

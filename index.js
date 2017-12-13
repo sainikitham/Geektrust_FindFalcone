@@ -46,6 +46,30 @@ app.controller('myCtrl', function($scope, $http,  $route) {
               $scope[bool][i].disable = 'disabled';
             }
           }
+          if (bool == 'vehicles2') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles1[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles1[i].total_no;
+              }else {
+              }
+            }
+          }
+          if (bool == 'vehicles3') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles2[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles2[i].total_no;
+              }else {
+              }
+            }
+          }
+          if (bool == 'vehicles4') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles3[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles3[i].total_no;
+              }else {
+              }
+            }
+          }
         }
       }else if (item == "Enchai") {
         var distance = 200;
@@ -60,6 +84,30 @@ app.controller('myCtrl', function($scope, $http,  $route) {
                 $scope[bool][i].disable = 'nodisabled';
             }else {
               $scope[bool][i].disable = 'disabled';
+            }
+          }
+          if (bool == 'vehicles2') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles1[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles1[i].total_no;
+              }else {
+              }
+            }
+          }
+          if (bool == 'vehicles3') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles2[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles2[i].total_no;
+              }else {
+              }
+            }
+          }
+          if (bool == 'vehicles4') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles3[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles3[i].total_no;
+              }else {
+              }
             }
           }
         }
@@ -79,6 +127,30 @@ app.controller('myCtrl', function($scope, $http,  $route) {
               $scope[bool][i].disable = 'disabled';
             }
           }
+          if (bool == 'vehicles2') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles1[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles1[i].total_no;
+              }else {
+              }
+            }
+          }
+          if (bool == 'vehicles3') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles2[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles2[i].total_no;
+              }else {
+              }
+            }
+          }
+          if (bool == 'vehicles4') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles3[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles3[i].total_no;
+              }else {
+              }
+            }
+          }
         }
       }else if (item == "Sapir") {
         var distance = 400;
@@ -93,6 +165,30 @@ app.controller('myCtrl', function($scope, $http,  $route) {
                 $scope[bool][i].disable = 'nodisabled';
             }else {
               $scope[bool][i].disable = 'disabled';
+            }
+          }
+          if (bool == 'vehicles2') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles1[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles1[i].total_no;
+              }else {
+              }
+            }
+          }
+          if (bool == 'vehicles3') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles2[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles2[i].total_no;
+              }else {
+              }
+            }
+          }
+          if (bool == 'vehicles4') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles3[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles3[i].total_no;
+              }else {
+              }
             }
           }
         }
@@ -112,6 +208,30 @@ app.controller('myCtrl', function($scope, $http,  $route) {
               $scope[bool][i].disable = 'disabled';
             }
           }
+          if (bool == 'vehicles2') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles1[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles1[i].total_no;
+              }else {
+              }
+            }
+          }
+          if (bool == 'vehicles3') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles2[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles2[i].total_no;
+              }else {
+              }
+            }
+          }
+          if (bool == 'vehicles4') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles3[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles3[i].total_no;
+              }else {
+              }
+            }
+          }
         }
       }else if (item == "Pingasor") {
         var distance = 600;
@@ -128,6 +248,30 @@ app.controller('myCtrl', function($scope, $http,  $route) {
               $scope[bool][i].disable = 'disabled';
             }
           }
+          if (bool == 'vehicles2') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles1[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles1[i].total_no;
+              }else {
+              }
+            }
+          }
+          if (bool == 'vehicles3') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles2[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles2[i].total_no;
+              }else {
+              }
+            }
+          }
+          if (bool == 'vehicles4') {
+            for (var i = 0; i < $scope[bool].length; i++) {
+              if ($scope[bool][i].total_no != $scope.vehicles3[i].total_no) {
+                  $scope[bool][i].total_no = $scope.vehicles3[i].total_no;
+              }else {
+              }
+            }
+          }
         }
       }
      $scope.distance = distance;
@@ -136,6 +280,13 @@ app.controller('myCtrl', function($scope, $http,  $route) {
    $scope.start = function(id,disable,flash) {
     document.getElementById(disable).disabled = true;
     vehicles.push(id.vehicle.name);
+    for (var i = 0; i < $scope[flash].length; i++) {
+      if ($scope[flash][i].name == id.vehicle.name) {
+          $scope[flash][i].total_no = $scope[flash][i].total_no - 1;
+      }else {
+        $scope[flash][i].total_no = $scope[flash][i].total_no - 0;
+      }
+    }
     $scope.post_vehicles = vehicles;
     var x = id.vehicle.speed;
     var y = $scope.distance;
